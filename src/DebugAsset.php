@@ -7,7 +7,9 @@
 
 namespace yii\debug;
 
+use yii\bootstrap4\BootstrapAsset;
 use yii\web\AssetBundle;
+use yii\web\YiiAsset;
 
 /**
  * Debugger asset bundle
@@ -23,7 +25,7 @@ class DebugAsset extends AssetBundle
         'toolbar.css',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        YiiAsset::class,
+        BootstrapAsset::class,
     ];
 }
